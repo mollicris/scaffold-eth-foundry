@@ -19,6 +19,7 @@ contract YourContract {
     bool public premium = false;
     uint256 public totalCounter = 0;
     mapping(address => uint256) public userGreetingCounter;
+    uint256 private counter2;
 
     // Events: a way to emit log statements from smart contract that can be listened to by external parties
     event GreetingChange(address indexed greetingSetter, string newGreeting, bool premium, uint256 value);
@@ -70,6 +71,14 @@ contract YourContract {
     function withdraw() public isOwner {
         (bool success,) = owner.call{ value: address(this).balance }("");
         require(success, "Failed to send Ether");
+    }
+
+    function getValue() public view returns(uint256){
+        return counter2;
+    }
+
+    function setValue(uint256 _conter2) public{
+        counter2 = _conter2;
     }
 
     /**

@@ -26,6 +26,19 @@ const deployedContracts = {
         },
         {
           type: "function",
+          name: "getValue",
+          inputs: [],
+          outputs: [
+            {
+              name: "",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
           name: "greeting",
           inputs: [],
           outputs: [
@@ -75,6 +88,19 @@ const deployedContracts = {
           ],
           outputs: [],
           stateMutability: "payable",
+        },
+        {
+          type: "function",
+          name: "setValue",
+          inputs: [
+            {
+              name: "_conter2",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          outputs: [],
+          stateMutability: "nonpayable",
         },
         {
           type: "function",
@@ -148,7 +174,7 @@ const deployedContracts = {
         },
       ],
       inheritedFunctions: {},
-      deploymentFile: "run-1752179293.json",
+      deploymentFile: "run-1752240520.json",
       deploymentScript: "Deploy.s.sol",
     },
   },
